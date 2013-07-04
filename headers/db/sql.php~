@@ -20,7 +20,7 @@ include_once('sql.postgresql.php');
 
 function osonsqlconnect($table){
     global $osonbconfvar;
-    switch ($osonconfvar['db']['table']['servertype'][$table]) {
+    switch ($jsonbconfvar['db']['table']['servertype'][$table]) {
         case "mysqli" :
             return osonsqlmysqliconnect($table);    
             break;
@@ -38,7 +38,7 @@ function osonsqlconnect($table){
 
 function osonsqlinsert($table, $variables, $values, $error){
     global $osonbconfvar;
-    switch ($osonconfvar['db']['table']['servertype'][$table]) {
+    switch ($jsonbconfvar['db']['table']['servertype'][$table]) {
         case "mysqli" :
             return osonsqlmysqliinsert($table, $variables, $values, $error);
         case "mysqlnd" :
@@ -52,7 +52,7 @@ function osonsqlinsert($table, $variables, $values, $error){
 
 function osonsqlupdate($table, $variables, $values, $variablesw, $updateeqw, $valuesw, $xorw, $error){
     global $osonbconfvar;
-    switch ($osonconfvar['db']['table']['servertype'][$table]) {
+    switch ($jsonbconfvar['db']['table']['servertype'][$table]) {
         case "mysqli" :
             return osonsqlmysqliupdate($table, $variables, $values, $variablesw, $updateeqw, $valuesw, $xorw, $error);
         case "mysqlnd" :
@@ -65,7 +65,7 @@ function osonsqlupdate($table, $variables, $values, $variablesw, $updateeqw, $va
 }
 function osonsqlselect($table, $varw, $eqw, $valw, $xorw, $error) {
 	 global $osonconfvar;
-    switch ($osonconfvar['db']['table']['servertype'][$table]) {
+    switch ($jsonbconfvar['db']['table']['servertype'][$table]) {
         case "mysqli" :
             return osonsqlmysqliselect($table, $varw, $eqw, $valw, $xorw, $error);
         case "mysqlnd" :
@@ -79,7 +79,7 @@ function osonsqlselect($table, $varw, $eqw, $valw, $xorw, $error) {
 
 function jsonbsqldelete($table, $varw, $eqw, $valw, $xorw, $error) {
 	 global $osonconfvar;
-    switch ($osonconfvar['db']['table']['servertype'][$table]) {
+    switch ($jsonbconfvar['db']['table']['servertype'][$table]) {
         case "mysqli" :
             return osonsqlmysqlidelete($table, $varw, $eqw, $valw, $xorw, $error);
         case "mysqlnd" :
