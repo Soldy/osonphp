@@ -1,6 +1,6 @@
 <?php
 /**
-* JsonbEngine
+* OsonEngine
 *
 * PHP version 5
 *
@@ -77,7 +77,7 @@ function osonsqlselect($table, $varw, $eqw, $valw, $xorw, $error) {
     }
 }
 
-function jsonbsqldelete($table, $varw, $eqw, $valw, $xorw, $error) {
+function osonsqldelete($table, $varw, $eqw, $valw, $xorw, $error) {
 	 global $osonconfvar;
     switch ($osonconfvar['db']['table']['servertype'][$table]) {
         case "mysqli" :

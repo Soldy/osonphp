@@ -1,6 +1,6 @@
 <?php
 /**
-* JsonbEngine
+* OsonEngine
 *
 * PHP version 5
 *
@@ -31,17 +31,17 @@ $osonbconfvar['db']['mysqls']['auth']['host']=array("server1" => "host", "server
 $osonbconfvar['db']['mysqls']['auth']['port']=array("server1" => "port", "server2" => "port");
 
 
-$jsonbconfvar['db']['list']['tables']=array();
+$osonconfvar['db']['list']['tables']=array();
 
-$jsonbconfvar['db']['table']['servertype'][$table]
-$jsonbconfvar['db']['table']['servername'][$table]
-$jsonbconfvar['db']['table']['database'][$table]
-$jsonbconfvar['db']['table']['table'][$table]
-$jsonbconfvar['db']['table']['tabletype'][$table] =""; #master, slave, mirror, adhoc, backup, archive
-$jsonbconfvar['db']['table']['rowsname'][$table] = array();
-$jsonbconfvar['db']['table']['rowtype'][$table] = array();
-$jsonbconfvar['db']['table']['rowtype'][$table] = array();
-$jsonbconfvar['db']['table']['mirrors'][$table] = array();
+$osonconfvar['db']['table']['servertype'][$table]
+$osonconfvar['db']['table']['servername'][$table]
+$osonconfvar['db']['table']['database'][$table]
+$osonconfvar['db']['table']['table'][$table]
+$osonconfvar['db']['table']['tabletype'][$table] =""; #master, slave, mirror, adhoc, backup, archive
+$osonconfvar['db']['table']['rowsname'][$table] = array();
+$osonconfvar['db']['table']['rowtype'][$table] = array();
+$osonconfvar['db']['table']['rowtype'][$table] = array();
+$osonconfvar['db']['table']['mirrors'][$table] = array();
 
 
 ?>
